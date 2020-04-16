@@ -1,0 +1,108 @@
+     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/estadisticas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="Salir"
+                tools:context=".MainActivity" >
+                
+                <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <LinearLayout
+                android:id="@+id/layc8a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical" >
+                
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                
+                <TextView
+                android:id="@+id/textPreguntac8a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PREGUNTAc8a"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#002266"
+                android:textStyle="bold" />
+                
+   <CheckBox
+android:id="@+id/checkochoa_1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Trabajar"
+/>
+<CheckBox
+android:id="@+id/checkochoa_2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Estudiar"
+/>
+<CheckBox
+android:id="@+id/checkochoa_3"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Comprar despensa (alimentos/ limpieza/ etc)"
+/>
+<CheckBox
+android:id="@+id/checkochoa_4"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Hacer ejercicio/ pasear mascota"
+/>
+<CheckBox
+android:id="@+id/checkochoa_5"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Visitar familiares"
+/>
+<CheckBox
+android:id="@+id/checkochoa_6"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Pasear a niños, menores"
+/>
+<CheckBox
+android:id="@+id/checkochoa_7"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Salir a hacer pagos y trámites"
+/>
+<CheckBox
+android:id="@+id/checkochoa_8"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Hacer la vida normal"
+/>
+<CheckBox
+android:id="@+id/checkochoa_9"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Visitas médicas"
+/>
+<CheckBox
+android:id="@+id/checkochoa_10"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Otras"
+/>
+<CheckBox
+android:id="@+id/checkochoa_11"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="No sabe / No contestó"
+/>             
+                
+                
+</LinearLayout>
+</LinearLayout>
+</ScrollView>
+</RelativeLayout>
