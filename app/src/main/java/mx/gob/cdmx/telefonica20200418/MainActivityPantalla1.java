@@ -3644,12 +3644,11 @@ public class MainActivityPantalla1 extends Activity {
 
             String strLatitud = String.valueOf(latitude);
             String strLongitud = String.valueOf(longitude);
-
+            long consecutivoObtenido = 0;
             ContentValues values = new ContentValues();
             if (db != null) {
 
                 values.put("consecutivo_diario", elMaximo);
-                //values.put("consecutivo", elMaximo);
                 values.put("diario", elMaximo);
                 values.put("usuario", cachaNombre().toUpperCase());
                 values.put("nombre_encuesta", nombreE.toUpperCase());
@@ -3722,9 +3721,11 @@ public class MainActivityPantalla1 extends Activity {
                 values.put("tiempo", elTiempo());
                 values.put("tipocaptura", tipoEncuesta);
 
-                db.insert("encuestas", null, values);
+                consecutivoObtenido = db.insert("encuestas", null, values);
             }
             db.close();
+
+            values.put("consecutivo", consecutivoObtenido);
 
             guardaEncuestaWS(values);
 

@@ -683,6 +683,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
             Nombre nom = new Nombre();
             String nombreE = nom.nombreEncuesta();
 
+            long consecutivoObtenido = 0;
             ContentValues values = new ContentValues();
 
             if (db != null) {
@@ -701,10 +702,10 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
                 values.put("status", "0");
                 values.put("estatus", "0");
                 values.put("tiempo", "00:00");
-                db.insert("encuestas", null, values);
+                consecutivoObtenido = db.insert("encuestas", null, values);
             }
 //			db.close();
-
+            values.put("consecutivo", consecutivoObtenido);
             //
             guardaEncuestaWS(values);
 
