@@ -687,6 +687,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
             if (db != null) {
                 values.put("consecutivo_diario", elMaximo);
+                //values.put("consecutivo", elMaximo);
+                values.put("diario", elMaximo);
                 values.put("usuario", cachaNombre().toUpperCase());
                 values.put("nombre_encuesta", nombreE.toUpperCase());
                 values.put("fecha", formattedDate3);
@@ -697,6 +699,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
                 values.put("longitud", strLongitud);
                 values.put("tipocaptura", strTipoCierre);
                 values.put("status", "0");
+                values.put("estatus", "0");
                 values.put("tiempo", "00:00");
                 db.insert("encuestas", null, values);
             }

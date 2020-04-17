@@ -45,7 +45,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
     static String prefix = ID;
 
     // private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() +"/Mis_archivos/" +nombreE+"_"+prefix+"";
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 13;
 
     public UsuariosSQLiteHelper(Context context, String name,CursorFactory factory, int version, String DATABASE_NAME) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -93,6 +93,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
     public static class TablaEncuestas{
         public static String TABLA_ENCUESTAS = "encuestas";
         public static String COLUMNA_CONSECUTIVO_DIARIO = "consecutivo_diario";
+        public static String COLUMNA_DIARIO = "diario";
         public static String COLUMNA_USUARIO = "usuario";
         public static String COLUMNA_ENCUESTA = "encuesta";
         public static String COLUMNA_FECHA = "fecha";
@@ -159,6 +160,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
         public static String COLUMNA_abandono="abandono";
         public static String COLUMNA_suma="suma";
         public static String COLUMNA_estatus="estatus";
+        public static String COLUMNA_status="status";
         // FINALIZAN PREGUNTAS
         public static String COLUMNA_TIEMPO = "tiempo";
         public static String COLUMNA_TIPO_CAPTURA = "tipo_captura";
@@ -171,6 +173,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
             + TablaEncuestas.TABLA_ENCUESTAS + "("
             + "id integer primary key autoincrement,"
             + TablaEncuestas.COLUMNA_CONSECUTIVO_DIARIO + " text not null, "
+            + TablaEncuestas.COLUMNA_DIARIO + " text not null, "
             + TablaEncuestas.COLUMNA_USUARIO + " text not null, "
             + TablaEncuestas.COLUMNA_ENCUESTA + " text not null, "
             + TablaEncuestas.COLUMNA_FECHA + " date not null, "
@@ -238,6 +241,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
 
             + TablaEncuestas.COLUMNA_suma +  " text, "
             + TablaEncuestas.COLUMNA_estatus +  " text, "
+            + TablaEncuestas.COLUMNA_status +  " text, "
             + TablaEncuestas.COLUMNA_TIEMPO + " text not null, "
             + TablaEncuestas.COLUMNA_TIPO_CAPTURA + " text not null); ";
 

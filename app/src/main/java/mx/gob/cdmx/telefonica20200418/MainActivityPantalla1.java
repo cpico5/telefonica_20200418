@@ -3649,6 +3649,8 @@ public class MainActivityPantalla1 extends Activity {
             if (db != null) {
 
                 values.put("consecutivo_diario", elMaximo);
+                //values.put("consecutivo", elMaximo);
+                values.put("diario", elMaximo);
                 values.put("usuario", cachaNombre().toUpperCase());
                 values.put("nombre_encuesta", nombreE.toUpperCase());
                 values.put("fecha", formattedDate1);
@@ -3715,6 +3717,7 @@ public class MainActivityPantalla1 extends Activity {
 
                 values.put("suma", suma);
                 values.put("status", status);
+                values.put("estatus", status);
 
                 values.put("tiempo", elTiempo());
                 values.put("tipocaptura", tipoEncuesta);
