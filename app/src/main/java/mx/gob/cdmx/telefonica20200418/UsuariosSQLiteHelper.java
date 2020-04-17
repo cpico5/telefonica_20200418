@@ -45,7 +45,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
     static String prefix = ID;
 
     // private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() +"/Mis_archivos/" +nombreE+"_"+prefix+"";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     public UsuariosSQLiteHelper(Context context, String name,CursorFactory factory, int version, String DATABASE_NAME) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -94,7 +94,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
         public static String TABLA_ENCUESTAS = "encuestas";
         public static String COLUMNA_CONSECUTIVO_DIARIO = "consecutivo_diario";
         public static String COLUMNA_USUARIO = "usuario";
-        public static String COLUMNA_NOMBRE_ENCUESTA = "nombre_encuesta";
+        public static String COLUMNA_ENCUESTA = "encuesta";
         public static String COLUMNA_FECHA = "fecha";
         public static String COLUMNA_HORA = "hora";
         public static String COLUMNA_imei = "imei";
@@ -102,39 +102,39 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
         public static String COLUMNA_latitud = "latitud";
         public static String COLUMNA_longitud = "longitud";
         //INICIAN PREGUNTAS
-        public static String COLUMNA_preguntavive="preguntavive";
-        public static String COLUMNA_pregunta_0="pregunta_0";
-        public static String COLUMNA_pregunta_1="pregunta_1";
-        public static String COLUMNA_pregunta_2="pregunta_2";
-        public static String COLUMNA_pregunta_3="pregunta_3";
-        public static String COLUMNA_pregunta_4="pregunta_4";
-        public static String COLUMNA_pregunta_5="pregunta_5";
-        public static String COLUMNA_pregunta_6="pregunta_6";
-        public static String COLUMNA_pregunta_7="pregunta_7";
-        public static String COLUMNA_pregunta_c1="pregunta_c1";
-        public static String COLUMNA_pregunta_c2="pregunta_c2";
-        public static String COLUMNA_pregunta_c3="pregunta_c3";
-        public static String COLUMNA_pregunta_c4="pregunta_c4";
-        public static String COLUMNA_pregunta_c4a="pregunta_c4a";
-        public static String COLUMNA_pregunta_c5="pregunta_c5";
-        public static String COLUMNA_pregunta_c6="pregunta_c6";
-        public static String COLUMNA_pregunta_c7="pregunta_c7";
-        public static String COLUMNA_pregunta_c8="pregunta_c8";
-        public static String COLUMNA_pregunta_c8a="pregunta_c8a";
-        public static String COLUMNA_pregunta_c8a1="pregunta_c8a1";
-        public static String COLUMNA_pregunta_c8a2="pregunta_c8a2";
-        public static String COLUMNA_pregunta_c8a3="pregunta_c8a3";
-        public static String COLUMNA_pregunta_c9="pregunta_c9";
-        public static String COLUMNA_pregunta_c10="pregunta_c10";
-        public static String COLUMNA_pregunta_c10a="pregunta_c10a";
-        public static String COLUMNA_pregunta_c11="pregunta_c11";
-        public static String COLUMNA_pregunta_c12="pregunta_c12";
-        public static String COLUMNA_pregunta_c13="pregunta_c13";
-        public static String COLUMNA_pregunta_c14="pregunta_c14";
-        public static String COLUMNA_pregunta_c15="pregunta_c15";
-        public static String COLUMNA_pregunta_c16="pregunta_c16";
-        public static String COLUMNA_pregunta_c17="pregunta_c17";
-        public static String COLUMNA_pregunta_c18="pregunta_c18";
+        public static String COLUMNA_preguntavive   ="preguntavive";
+        public static String COLUMNA_pregunta_0     ="pregunta_0";
+        public static String COLUMNA_pregunta_1     ="pregunta_1";
+        public static String COLUMNA_pregunta_2     ="pregunta_2";
+        public static String COLUMNA_pregunta_3     ="pregunta_3";
+        public static String COLUMNA_pregunta_4     ="pregunta_4";
+        public static String COLUMNA_pregunta_5     ="pregunta_5";
+        public static String COLUMNA_pregunta_6     ="pregunta_6";
+        public static String COLUMNA_pregunta_7     ="pregunta_7";
+        public static String COLUMNA_pregunta_c1    ="pregunta_c1";
+        public static String COLUMNA_pregunta_c2    ="pregunta_c2";
+        public static String COLUMNA_pregunta_c3    ="pregunta_c3";
+        public static String COLUMNA_pregunta_c4    ="pregunta_c4";
+        public static String COLUMNA_pregunta_c4a   ="pregunta_c4a";
+        public static String COLUMNA_pregunta_c5    ="pregunta_c5";
+        public static String COLUMNA_pregunta_c6    ="pregunta_c6";
+        public static String COLUMNA_pregunta_c7    ="pregunta_c7";
+        public static String COLUMNA_pregunta_c8    ="pregunta_c8";
+        public static String COLUMNA_pregunta_c8a   ="pregunta_c8a";
+        public static String COLUMNA_pregunta_c8a1  ="pregunta_c8a1";
+        public static String COLUMNA_pregunta_c8a2  ="pregunta_c8a2";
+        public static String COLUMNA_pregunta_c8a3  ="pregunta_c8a3";
+        public static String COLUMNA_pregunta_c9    ="pregunta_c9";
+        public static String COLUMNA_pregunta_c10   ="pregunta_c10";
+        public static String COLUMNA_pregunta_c10a  ="pregunta_c10a";
+        public static String COLUMNA_pregunta_c11   ="pregunta_c11";
+        public static String COLUMNA_pregunta_c12   ="pregunta_c12";
+        public static String COLUMNA_pregunta_c13   ="pregunta_c13";
+        public static String COLUMNA_pregunta_c14   ="pregunta_c14";
+        public static String COLUMNA_pregunta_c15   ="pregunta_c15";
+        public static String COLUMNA_pregunta_c16   ="pregunta_c16";
+        public static String COLUMNA_pregunta_c17   ="pregunta_c17";
+        public static String COLUMNA_pregunta_c18   ="pregunta_c18";
 
 
         public static String COLUMNA_hijos  		="hijos";
@@ -146,22 +146,22 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
         public static String COLUMNA_cuartos_dormir ="cuartos_dormir";
         public static String COLUMNA_focos  		="focos";
         public static String COLUMNA_banos  		="banos";
-        public static String COLUMNA_regadera  		="regadera";
-        public static String COLUMNA_internet  		="internet";
+        public static String COLUMNA_regadera  	="regadera";
+        public static String COLUMNA_internet  	="internet";
         public static String COLUMNA_trabajaron 	="trabajaron";
         public static String COLUMNA_estufa  		="estufa";
-        public static String COLUMNA_edad  			="edad";
+        public static String COLUMNA_edad  		="edad";
         public static String COLUMNA_genero  		="genero";
-        public static String COLUMNA_tipo_vivienda  ="tipo_vivienda";
-        public static String COLUMNA_tipo_piso 		="tipo_piso";
+        public static String COLUMNA_tipo_vivienda ="tipo_vivienda";
+        public static String COLUMNA_tipo_piso 	="tipo_piso";
 
 
         public static String COLUMNA_abandono="abandono";
         public static String COLUMNA_suma="suma";
-        public static String COLUMNA_status="status";
+        public static String COLUMNA_estatus="estatus";
         // FINALIZAN PREGUNTAS
         public static String COLUMNA_TIEMPO = "tiempo";
-        public static String COLUMNA_TIPOCAPTURA = "tipocaptura";
+        public static String COLUMNA_TIPO_CAPTURA = "tipo_captura";
     }
 
 
@@ -172,7 +172,7 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
             + "id integer primary key autoincrement,"
             + TablaEncuestas.COLUMNA_CONSECUTIVO_DIARIO + " text not null, "
             + TablaEncuestas.COLUMNA_USUARIO + " text not null, "
-            + TablaEncuestas.COLUMNA_NOMBRE_ENCUESTA + " text not null, "
+            + TablaEncuestas.COLUMNA_ENCUESTA + " text not null, "
             + TablaEncuestas.COLUMNA_FECHA + " date not null, "
             + TablaEncuestas.COLUMNA_HORA + " text not null, "
             + TablaEncuestas.COLUMNA_imei + " text not null, "
@@ -237,9 +237,9 @@ public class UsuariosSQLiteHelper extends SQLiteOpenHelper {
             + TablaEncuestas.COLUMNA_abandono +  " text, "
 
             + TablaEncuestas.COLUMNA_suma +  " text, "
-            + TablaEncuestas.COLUMNA_status +  " text, "
+            + TablaEncuestas.COLUMNA_estatus +  " text, "
             + TablaEncuestas.COLUMNA_TIEMPO + " text not null, "
-            + TablaEncuestas.COLUMNA_TIPOCAPTURA + " text not null); ";
+            + TablaEncuestas.COLUMNA_TIPO_CAPTURA + " text not null); ";
 
 ////////////////////////////  TABLA USUARIOS	 /////////////////////////////////////////////////////////    
 
